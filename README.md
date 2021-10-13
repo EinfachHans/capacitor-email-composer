@@ -90,6 +90,7 @@ Open the E-Mail Composer
 | **`bcc`**     | <code>string[]</code> | email addresses for BCC field |
 | **`subject`** | <code>string</code>   | subject of the email          |
 | **`body`**    | <code>string</code>   | email body                    |
+| **`isHtml`**  | <code>boolean</code>  | formt of email body           |
 
 </docgen-api>
 
