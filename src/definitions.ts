@@ -54,7 +54,7 @@ export interface OpenOptions {
   body?: string;
 
   /**
-   * formt of email body
+   * indicats if the body is HTML or plain text (primarily iOS)
    *
    * @since 1.0.1
    */

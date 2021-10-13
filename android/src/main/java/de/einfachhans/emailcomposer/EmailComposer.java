@@ -8,6 +8,7 @@ import com.getcapacitor.PluginCall;
 import org.json.JSONException;
 
 import java.util.List;
+import android.text.Html;
 
 public class EmailComposer {
 
@@ -19,6 +20,7 @@ public class EmailComposer {
 
         // Body
         String body = call.getString("body", "");
+        CharSequence bodyText = call.getBool("isHtml") ? Html.fromHtml(body) : body;
 
         // To
         List<String> toList = call.getArray("to").toList();
@@ -37,7 +39,7 @@ public class EmailComposer {
 
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(MAILTO_SCHEME));
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        intent.putExtra(Intent.EXTRA_TEXT, body);
+        intent.putExtra(Intent.EXTRA_TEXT, bodyText);
         intent.putExtra(Intent.EXTRA_EMAIL, to);
         intent.putExtra(Intent.EXTRA_CC, cc);
         intent.putExtra(Intent.EXTRA_BCC, bcc);
