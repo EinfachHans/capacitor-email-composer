@@ -2,13 +2,10 @@ package de.einfachhans.emailcomposer;
 
 import android.content.Intent;
 import android.net.Uri;
-
-import com.getcapacitor.PluginCall;
-
-import org.json.JSONException;
-
-import java.util.List;
 import android.text.Html;
+import com.getcapacitor.PluginCall;
+import java.util.List;
+import org.json.JSONException;
 
 public class EmailComposer {
 
