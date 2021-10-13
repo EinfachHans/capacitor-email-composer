@@ -52,4 +52,11 @@ export interface OpenOptions {
    * @since 1.0.0
    */
   body?: string;
+
+  /**
+   * formt of email body
+   *
+   * @since 1.0.1
+   */
+   isHtml?: boolean;
 }
