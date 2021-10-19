@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EinfachHans/capacitor-email-composer.git.git"
+    "url": "git+https://github.com/EinfachHans/capacitor-email-composer.git"
   },
   "bugs": {
     "url": "https://github.com/EinfachHans/capacitor-email-composer.git/issues"
