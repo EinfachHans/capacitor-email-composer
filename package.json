@@ -39,11 +39,10 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api EmailComposerPlugin --output-readme README.md --output-json dist/docs.json&& doctoc readme.md --github --title '**Table of Content**' --maxlevel 3",
+    "docgen": "docgen --api EmailComposerPlugin --output-readme README.md --output-json dist/docs.json && doctoc README.md --github --title '**Table of Content**' --maxlevel 3",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
-    "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "watch": "tsc --watch"
   },
   "devDependencies": {
     "@capacitor/android": "^3.0.0",
@@ -59,7 +58,14 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.32.0",
     "swiftlint": "^1.0.1",
-    "typescript": "~4.0.3"
+    "typescript": "~4.0.3",
+    "@commitlint/config-conventional": "13.2.0",
+    "@saithodev/semantic-release-backmerge": "1.5.3",
+    "@semantic-release/changelog": "6.0.0",
+    "@semantic-release/exec": "6.0.1",
+    "@semantic-release/git": "10.0.0",
+    "@semantic-release/npm": "8.0.0",
+    "doctoc": "2.0.1"
   },
   "peerDependencies": {
     "@capacitor/core": "^3.0.0"

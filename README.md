@@ -83,13 +83,14 @@ Open the E-Mail Composer
 
 #### OpenOptions
 
-| Prop          | Type                  | Description                   |
-| ------------- | --------------------- | ----------------------------- |
-| **`to`**      | <code>string[]</code> | email addresses for TO field  |
-| **`cc`**      | <code>string[]</code> | email addresses for CC field  |
-| **`bcc`**     | <code>string[]</code> | email addresses for BCC field |
-| **`subject`** | <code>string</code>   | subject of the email          |
-| **`body`**    | <code>string</code>   | email body                    |
+| Prop          | Type                  | Description                                                |
+| ------------- | --------------------- | ---------------------------------------------------------- |
+| **`to`**      | <code>string[]</code> | email addresses for TO field                               |
+| **`cc`**      | <code>string[]</code> | email addresses for CC field                               |
+| **`bcc`**     | <code>string[]</code> | email addresses for BCC field                              |
+| **`subject`** | <code>string</code>   | subject of the email                                       |
+| **`body`**    | <code>string</code>   | email body                                                 |
+| **`isHtml`**  | <code>boolean</code>  | indicats if the body is HTML or plain text (primarily iOS) |
 
 </docgen-api>
 
