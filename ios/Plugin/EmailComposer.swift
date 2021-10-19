@@ -14,7 +14,7 @@ import MessageUI
         draft.setSubject(call.getString("subject", ""));
         
         // Body
-        draft.setMessageBody(call.getString("body", ""), isHTML: false);
+        draft.setMessageBody(call.getString("body", ""), isHTML: call.getBoolean("isHtml", false));
         
         // TO
         draft.setToRecipients(call.getArray("to", String.self));

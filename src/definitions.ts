@@ -6,7 +6,7 @@ export interface EmailComposerPlugin {
    *
    * @since 1.0.0
    */
-  hasAccount(): Promise<{hasAccount: boolean}>;
+  hasAccount(): Promise<{ hasAccount: boolean }>;
 
   /**
    * Open the E-Mail Composer
@@ -52,4 +52,11 @@ export interface OpenOptions {
    * @since 1.0.0
    */
   body?: string;
+
+  /**
+   * indicats if the body is HTML or plain text (primarily iOS)
+   *
+   * @since 1.0.1
+   */
+  isHtml?: boolean;
 }
