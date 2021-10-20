@@ -6,25 +6,25 @@ import MessageUI
     func canSendMail() -> Bool {
         return MFMailComposeViewController.canSendMail();
     }
-    
+
     func getMailComposerFromCall(_ call: CAPPluginCall, delegateTo: MFMailComposeViewControllerDelegate) -> MFMailComposeViewController {
         let draft = MFMailComposeViewController();
-        
+
         // Subject
         draft.setSubject(call.getString("subject", ""));
-        
+
         // Body
-        draft.setMessageBody(call.getString("body", ""), isHTML: call.getBoolean("isHtml", false));
-        
+        draft.setMessageBody(call.getString("body", ""), isHTML: call.getBool("isHtml", false));
+
         // TO
         draft.setToRecipients(call.getArray("to", String.self));
-        
+
         // CC
         draft.setCcRecipients(call.getArray("cc", String.self));
-        
+
         // BCC
         draft.setBccRecipients(call.getArray("bcc", String.self));
-        
+
         draft.mailComposeDelegate = delegateTo;
         return draft;
     }
