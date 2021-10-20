@@ -1,3 +1,10 @@
+### [1.1.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.1.0...V1.1.1) (2021-10-20)
+
+
+### Bug Fixes
+
+* **ios:** correctly get the boolean for isHtml ([7ed45af](https://github.com/EinfachHans/capacitor-email-composer/commit/7ed45af2a36c07f2b3aed084b70624eb7b078dc9))
+
 ## [1.1.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.0.0...V1.1.0) (2021-10-19)
 
 
