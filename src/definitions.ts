@@ -54,7 +54,7 @@ export interface OpenOptions {
   body?: string;
 
   /**
-   * indicats if the body is HTML or plain text (primarily iOS)
+   * indicates if the body is HTML or plain text (primarily iOS)
    *
    * @since 1.0.1
    */
