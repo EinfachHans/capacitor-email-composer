@@ -17,7 +17,7 @@ public class EmailComposer {
 
         // Body
         String body = call.getString("body", "");
-        CharSequence bodyText = call.getBool("isHtml") ? Html.fromHtml(body) : body;
+        CharSequence bodyText = call.getBoolean("isHtml") ? Html.fromHtml(body) : body;
 
         // To
         List<String> toList = call.getArray("to").toList();
