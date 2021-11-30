@@ -1,3 +1,10 @@
+### [1.1.3](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.1.2...V1.1.3) (2021-11-30)
+
+
+### Bug Fixes
+
+* **android:** set default value for isHtml ([#8](https://github.com/EinfachHans/capacitor-email-composer/issues/8)) ([948e168](https://github.com/EinfachHans/capacitor-email-composer/commit/948e168c3ca79d354095226102680d723b5955d8))
+
 ### [1.1.2](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.1.1...V1.1.2) (2021-10-23)
 
 
