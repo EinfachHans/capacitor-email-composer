@@ -1,6 +1,6 @@
 # Capacitor E-Mail Composer
 
-![Maintenance](https://img.shields.io/maintenance/yes/2021)
+![Maintenance](https://img.shields.io/maintenance/yes/2022)
 [![npm](https://img.shields.io/npm/v/capacitor-email-composer)](https://www.npmjs.com/package/capacitor-email-composer)
 
 👉🏼 **Note**: this Plugin is developed for Capacitor V3
