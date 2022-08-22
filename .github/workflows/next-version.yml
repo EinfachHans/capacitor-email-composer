@@ -20,14 +20,14 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 14.17.0 ]
+        node-version: [ 16.14.2 ]
 
     steps:
       - name: 'Check out Git repository'
         uses: actions/checkout@v2
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
