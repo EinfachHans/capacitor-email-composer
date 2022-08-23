@@ -54,9 +54,42 @@ export interface OpenOptions {
   body?: string;
 
   /**
-   * indicats if the body is HTML or plain text (primarily iOS)
+   * indicates if the body is HTML or plain text (primarily iOS)
    *
    * @since 1.0.1
    */
   isHtml?: boolean;
+
+  /**
+   * attachments that are added to the mail
+   * file paths or base64 data streams
+   *
+   * @since 1.2.0
+   */
+  attachments?: Attachment[];
+}
+
+export interface Attachment {
+  /**
+   * The path of the attachment. See the docs for explained informations.
+   *
+   * @since 1.2.0
+   */
+  path: string;
+
+  /**
+   * The type of the attachment. See the docs for explained informations.
+   *
+   * @since 1.2.0
+   */
+  type: 'absolute' | 'resource' | 'asset' | 'base64';
+
+  /**
+   * The name of the attachment. See the docs for explained informations.
+   *
+   * Required for base64 attachements.
+   *
+   * @since 1.2.0
+   */
+  name?: string;
 }

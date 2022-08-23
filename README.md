@@ -1,9 +1,7 @@
 # Capacitor E-Mail Composer
 
-![Maintenance](https://img.shields.io/maintenance/yes/2021)
+![Maintenance](https://img.shields.io/maintenance/yes/2022)
 [![npm](https://img.shields.io/npm/v/capacitor-email-composer)](https://www.npmjs.com/package/capacitor-email-composer)
-
-👉🏼 **Note**: this Plugin is developed for Capacitor V3
 
 This Plugin is used to open a native E-Mail Composer within your Capacitor App.
 
@@ -33,6 +31,64 @@ Please consider donating if you're using this plugin in an app that makes you mo
 ```bash
 npm install capacitor-email-composer
 npx cap sync
+```
+
+## Attachments
+
+You can add attachments to the draft mail by using the `attachments` option in the `open(...)` method.
+Every attachment needs a `type` and a `path`. If you are adding a `base64` type attachment, you also need to set the `name`:
+
+### Device Storage
+
+The path to the files must be defined absolute from the root of the file system. On Android the user has to allow the app first to read from external storage!
+
+```ts
+EmailComposerPlugin.open({
+  attachments: [{
+    type: 'absolute',
+    path: 'storage/sdcard/icon.png' // Android
+  }]
+})
+```
+
+### Native resources
+
+Each app has a resource folder, e.g. the res folder for Android apps or the Resource folder for iOS apps. The following example shows how to attach the app icon from within the app's resource folder.
+
+```ts
+EmailComposerPlugin.open({
+  attachments: [{
+    type: 'resource',
+    path: 'icon.png'
+  }]
+})
+```
+
+### Assets
+
+The path to the files must be defined relative from the root of the mobile web app assets folder, which is located under the build folder.
+
+```ts
+EmailComposerPlugin.open({
+  attachments: [{
+    type: 'asset',
+    path: '/icon/favicon.png' // starting slash is important
+  }]
+})
+```
+
+### Base64
+
+The code below shows how to attach a base64 encoded image which will be added as an image. **You must set a name**.
+
+```ts
+EmailComposerPlugin.open({
+  attachments: [{
+    type: 'base64',
+    path: 'iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6...',
+    name: 'icon.png' // this is required
+  }]
+})
 ```
 
 ## API

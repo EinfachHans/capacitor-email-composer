@@ -18,9 +18,13 @@ public class EmailComposerPlugin: CAPPlugin, MFMailComposeViewControllerDelegate
 
     @objc func open(_ call: CAPPluginCall) {
         DispatchQueue.main.async {
-            self.savedOpenCall = call;
-            let draft = self.implementation.getMailComposerFromCall(call, delegateTo: self);
-            self.bridge?.viewController?.present(draft, animated: true, completion: nil)
+            do {
+                self.savedOpenCall = call;
+                let draft = try self.implementation.getMailComposerFromCall(call, delegateTo: self);
+                self.bridge?.viewController?.present(draft, animated: true, completion: nil)
+            } catch {
+                call.reject(error as! String);
+            }
         }
     }
     
