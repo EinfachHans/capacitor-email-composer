@@ -1,3 +1,11 @@
+## [1.2.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.1.3...V1.2.0) (2022-08-23)
+
+
+### Features
+
+* support attachments ([68cfb8c](https://github.com/EinfachHans/capacitor-email-composer/commit/68cfb8c2788da69a86733e6a0cd376ad5300e855))
+* Update to Capacitor V4 ([c865c15](https://github.com/EinfachHans/capacitor-email-composer/commit/c865c155a1b35071d17e2ed0f73898bfad873588))
+
 ### [1.1.3](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.1.2...V1.1.3) (2021-11-30)
 
 

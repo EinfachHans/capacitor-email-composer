@@ -18,6 +18,11 @@ Please consider donating if you're using this plugin in an app that makes you mo
 **Table of Content**
 
 - [Install](#install)
+- [Attachments](#attachments)
+  - [Device Storage](#device-storage)
+  - [Native resources](#native-resources)
+  - [Assets](#assets)
+  - [Base64](#base64)
 - [API](#api)
   - [hasAccount()](#hasaccount)
   - [open(...)](#open)
@@ -139,14 +144,24 @@ Open the E-Mail Composer
 
 #### OpenOptions
 
-| Prop          | Type                  | Description                                                |
-| ------------- | --------------------- | ---------------------------------------------------------- |
-| **`to`**      | <code>string[]</code> | email addresses for TO field                               |
-| **`cc`**      | <code>string[]</code> | email addresses for CC field                               |
-| **`bcc`**     | <code>string[]</code> | email addresses for BCC field                              |
-| **`subject`** | <code>string</code>   | subject of the email                                       |
-| **`body`**    | <code>string</code>   | email body                                                 |
-| **`isHtml`**  | <code>boolean</code>  | indicats if the body is HTML or plain text (primarily iOS) |
+| Prop              | Type                      | Description                                                              |
+| ----------------- | ------------------------- | ------------------------------------------------------------------------ |
+| **`to`**          | <code>string[]</code>     | email addresses for TO field                                             |
+| **`cc`**          | <code>string[]</code>     | email addresses for CC field                                             |
+| **`bcc`**         | <code>string[]</code>     | email addresses for BCC field                                            |
+| **`subject`**     | <code>string</code>       | subject of the email                                                     |
+| **`body`**        | <code>string</code>       | email body                                                               |
+| **`isHtml`**      | <code>boolean</code>      | indicates if the body is HTML or plain text (primarily iOS)              |
+| **`attachments`** | <code>Attachment[]</code> | attachments that are added to the mail file paths or base64 data streams |
+
+
+#### Attachment
+
+| Prop       | Type                                                         | Description                                                                                            |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| **`path`** | <code>string</code>                                          | The path of the attachment. See the docs for explained informations.                                   |
+| **`type`** | <code>'absolute' \| 'resource' \| 'asset' \| 'base64'</code> | The type of the attachment. See the docs for explained informations.                                   |
+| **`name`** | <code>string</code>                                          | The name of the attachment. See the docs for explained informations. Required for base64 attachements. |
 
 </docgen-api>
 
