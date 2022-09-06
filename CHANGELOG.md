@@ -1,3 +1,10 @@
+### [1.2.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.2.0...V1.2.1) (2022-09-06)
+
+
+### Bug Fixes
+
+* **ios:** update Deployment Target to 13 ([#15](https://github.com/EinfachHans/capacitor-email-composer/issues/15)) ([2512430](https://github.com/EinfachHans/capacitor-email-composer/commit/25124300f29bed6c9f69b3fd56fe15f8931d91b3))
+
 ## [1.2.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.1.3...V1.2.0) (2022-08-23)
 
 
