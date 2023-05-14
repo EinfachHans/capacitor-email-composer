@@ -82,7 +82,7 @@ module.exports = {
     [
       '@saithodev/semantic-release-backmerge',
       {
-        branchName: 'dev',
+        backmergeBranches: ['dev'],
         clearWorkspace: true
       }
     ]
