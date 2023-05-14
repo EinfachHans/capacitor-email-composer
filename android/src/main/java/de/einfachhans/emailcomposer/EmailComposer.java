@@ -33,17 +33,17 @@ public class EmailComposer {
         CharSequence bodyText = call.getBoolean("isHtml", false) ? Html.fromHtml(body) : body;
 
         // To
-        List<String> toList = call.getArray("to").toList();
+        List<String> toList = call.getArray("to", new JSArray()).toList();
         String[] to = new String[toList.size()];
         to = toList.toArray(to);
 
         // CC
-        List<String> ccList = call.getArray("cc").toList();
+        List<String> ccList = call.getArray("cc", new JSArray()).toList();
         String[] cc = new String[ccList.size()];
         cc = ccList.toArray(cc);
 
         // BCC
-        List<String> bccList = call.getArray("bcc").toList();
+        List<String> bccList = call.getArray("bcc", new JSArray()).toList();
         String[] bcc = new String[bccList.size()];
         bcc = bccList.toArray(bcc);
 

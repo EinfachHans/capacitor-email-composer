@@ -1,6 +1,6 @@
 # Capacitor E-Mail Composer
 
-![Maintenance](https://img.shields.io/maintenance/yes/2022)
+![Maintenance](https://img.shields.io/maintenance/yes/2023)
 [![npm](https://img.shields.io/npm/v/capacitor-email-composer)](https://www.npmjs.com/package/capacitor-email-composer)
 
 This Plugin is used to open a native E-Mail Composer within your Capacitor App.
@@ -127,7 +127,7 @@ Android: Currently does nothing
 ### open(...)
 
 ```typescript
-open(options?: OpenOptions | undefined) => Promise<void>
+open(options?: OpenOptions) => Promise<void>
 ```
 
 Open the E-Mail Composer
