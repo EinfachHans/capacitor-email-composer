@@ -1,3 +1,14 @@
+## [2.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.2.1...V2.0.0) (2023-05-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* Starting by this version only Capacitor 5 is supported
+
+### Features
+
+* update to Capacitor 5 ([28e28bc](https://github.com/EinfachHans/capacitor-email-composer/commit/28e28bcbdca5599f9e02f9866e5e64d713631373))
+
 ### [1.2.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.2.0...V1.2.1) (2022-09-06)
 
 
