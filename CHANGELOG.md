@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V2.0.0...V2.0.1) (2023-05-16)
+
+
+### Bug Fixes
+
+* don't use fixed peer dependency ([424e0ab](https://github.com/EinfachHans/capacitor-email-composer/commit/424e0ab3b1d8f0f08df43a4b86bbd791216fd989)), closes [#25](https://github.com/EinfachHans/capacitor-email-composer/issues/25)
+
 ## [2.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V1.2.1...V2.0.0) (2023-05-14)
 
 
