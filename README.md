@@ -48,7 +48,9 @@ Every attachment needs a `type` and a `path`. If you are adding a `base64` type 
 The path to the files must be defined absolute from the root of the file system. On Android the user has to allow the app first to read from external storage!
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'absolute',
     path: 'storage/sdcard/icon.png' // Android
@@ -61,7 +63,9 @@ EmailComposerPlugin.open({
 Each app has a resource folder, e.g. the res folder for Android apps or the Resource folder for iOS apps. The following example shows how to attach the app icon from within the app's resource folder.
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'resource',
     path: 'icon.png'
@@ -74,7 +78,9 @@ EmailComposerPlugin.open({
 The path to the files must be defined relative from the root of the mobile web app assets folder, which is located under the build folder.
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'asset',
     path: '/icon/favicon.png' // starting slash is important
@@ -87,7 +93,9 @@ EmailComposerPlugin.open({
 The code below shows how to attach a base64 encoded image which will be added as an image. **You must set a name**.
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'base64',
     path: 'iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6...',
