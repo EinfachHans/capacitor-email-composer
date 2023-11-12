@@ -70,8 +70,13 @@ module.exports = {
       '@semantic-release/git',
       {
         message: 'chore(release): ${nextRelease.version}',
-        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md', 'README.md']
-      }
+        assets: [
+          'package.json',
+          'package-lock.json',
+          'CHANGELOG.md',
+          'README.md'
+        ]
+      },
     ],
     [
       '@semantic-release/github',
@@ -83,7 +88,7 @@ module.exports = {
       '@saithodev/semantic-release-backmerge',
       {
         backmergeBranches: ['dev'],
-        clearWorkspace: true
+        clearWorkspace: true,
       }
     ]
   ]

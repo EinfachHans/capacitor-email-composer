@@ -5,7 +5,6 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.util.Base64;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,17 +25,17 @@ final class AssetUtil {
     static void cleanupAttachmentFolder(Context ctx) {
         try {
             String path = ctx.getExternalCacheDir() + ATTACHMENT_FOLDER;
-            File dir    = new File(path);
+            File dir = new File(path);
 
-            if (!dir.isDirectory())
-                return;
+            if (!dir.isDirectory()) return;
 
             File[] files = dir.listFiles();
 
             assert files != null;
-            for (File file : files) { file.delete(); }
-        } catch (Exception ignored){
-        }
+            for (File file : files) {
+                file.delete();
+            }
+        } catch (Exception ignored) {}
     }
 
     Uri parse(String path, String type, String name) {
@@ -192,5 +191,4 @@ final class AssetUtil {
 
         return resId;
     }
-
 }

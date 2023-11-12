@@ -4,14 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.Html;
-
 import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.PluginCall;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -79,16 +76,16 @@ public class EmailComposer {
             return;
         }
 
-        intent.setAction(Intent.ACTION_SEND_MULTIPLE)
-                .setType("*/*")
-                .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                .putExtra(Intent.EXTRA_STREAM, uris);
+        intent
+            .setAction(Intent.ACTION_SEND_MULTIPLE)
+            .setType("*/*")
+            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            .putExtra(Intent.EXTRA_STREAM, uris);
 
         if (uris.size() > 1) {
             return;
         }
 
-        intent.setAction(Intent.ACTION_SEND)
-                .putExtra(Intent.EXTRA_STREAM, uris.get(0));
+        intent.setAction(Intent.ACTION_SEND).putExtra(Intent.EXTRA_STREAM, uris.get(0));
     }
 }
