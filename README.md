@@ -28,6 +28,8 @@ Please consider donating if you're using this plugin in an app that makes you mo
   - [open(...)](#open)
   - [Interfaces](#interfaces)
 - [Changelog](#changelog)
+- [Troubleshooting](#troubleshooting)
+  - [TransactionTooLargeException](#transactiontoolargeexception)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -183,3 +185,10 @@ Open the E-Mail Composer
 ## Changelog
 
 The full Changelog is available [here](CHANGELOG.md)
+
+## Troubleshooting
+
+### TransactionTooLargeException
+
+When sharing data between two applications, the Android OS might throw this exception for several reasons, for example if the file is too large.
+Read more [here](https://github.com/EinfachHans/capacitor-email-composer/issues/19#issuecomment-1786087158) about how to work around this problem.
