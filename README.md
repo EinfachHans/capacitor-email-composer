@@ -120,14 +120,14 @@ EmailComposer.open({
 ### hasAccount()
 
 ```typescript
-hasAccount() => Promise<{ hasAccount: boolean; }>
+hasAccount() => Promise<HasAccountResult>
 ```
 
 Checks if the User can send a Mail
 iOS: Check if the current Device is configured to send mail
 Android: Currently does nothing
 
-**Returns:** <code>Promise&lt;{ hasAccount: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#hasaccountresult">HasAccountResult</a>&gt;</code>
 
 --------------------
 
@@ -148,6 +148,13 @@ Open the E-Mail Composer
 
 
 ### Interfaces
+
+
+#### HasAccountResult
+
+| Prop             | Type                 |
+| ---------------- | -------------------- |
+| **`hasAccount`** | <code>boolean</code> |
 
 
 #### OpenOptions
