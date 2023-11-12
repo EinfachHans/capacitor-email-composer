@@ -131,13 +131,15 @@ Android: Currently does nothing
 
 **Returns:** <code>Promise&lt;<a href="#hasaccountresult">HasAccountResult</a>&gt;</code>
 
+**Since:** 1.0.0
+
 --------------------
 
 
 ### open(...)
 
 ```typescript
-open(options?: OpenOptions) => Promise<void>
+open(options?: OpenOptions | undefined) => Promise<void>
 ```
 
 Open the E-Mail Composer
@@ -145,6 +147,8 @@ Open the E-Mail Composer
 | Param         | Type                                                | Description                            |
 | ------------- | --------------------------------------------------- | -------------------------------------- |
 | **`options`** | <code><a href="#openoptions">OpenOptions</a></code> | optional Options to prefill the E-Mail |
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -154,31 +158,31 @@ Open the E-Mail Composer
 
 #### HasAccountResult
 
-| Prop             | Type                 |
-| ---------------- | -------------------- |
-| **`hasAccount`** | <code>boolean</code> |
+| Prop             | Type                 | Since |
+| ---------------- | -------------------- | ----- |
+| **`hasAccount`** | <code>boolean</code> | 1.0.0 |
 
 
 #### OpenOptions
 
-| Prop              | Type                      | Description                                                              |
-| ----------------- | ------------------------- | ------------------------------------------------------------------------ |
-| **`to`**          | <code>string[]</code>     | email addresses for TO field                                             |
-| **`cc`**          | <code>string[]</code>     | email addresses for CC field                                             |
-| **`bcc`**         | <code>string[]</code>     | email addresses for BCC field                                            |
-| **`subject`**     | <code>string</code>       | subject of the email                                                     |
-| **`body`**        | <code>string</code>       | email body                                                               |
-| **`isHtml`**      | <code>boolean</code>      | indicates if the body is HTML or plain text (primarily iOS)              |
-| **`attachments`** | <code>Attachment[]</code> | attachments that are added to the mail file paths or base64 data streams |
+| Prop              | Type                      | Description                                                              | Since |
+| ----------------- | ------------------------- | ------------------------------------------------------------------------ | ----- |
+| **`to`**          | <code>string[]</code>     | email addresses for TO field                                             | 1.0.0 |
+| **`cc`**          | <code>string[]</code>     | email addresses for CC field                                             | 1.0.0 |
+| **`bcc`**         | <code>string[]</code>     | email addresses for BCC field                                            | 1.0.0 |
+| **`subject`**     | <code>string</code>       | subject of the email                                                     | 1.0.0 |
+| **`body`**        | <code>string</code>       | email body                                                               | 1.0.0 |
+| **`isHtml`**      | <code>boolean</code>      | indicates if the body is HTML or plain text (primarily iOS)              | 1.0.1 |
+| **`attachments`** | <code>Attachment[]</code> | attachments that are added to the mail file paths or base64 data streams | 1.2.0 |
 
 
 #### Attachment
 
-| Prop       | Type                                                         | Description                                                                                            |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| **`path`** | <code>string</code>                                          | The path of the attachment. See the docs for explained informations.                                   |
-| **`type`** | <code>'absolute' \| 'resource' \| 'asset' \| 'base64'</code> | The type of the attachment. See the docs for explained informations.                                   |
-| **`name`** | <code>string</code>                                          | The name of the attachment. See the docs for explained informations. Required for base64 attachements. |
+| Prop       | Type                                                         | Description                                                                                            | Since |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ----- |
+| **`path`** | <code>string</code>                                          | The path of the attachment. See the docs for explained informations.                                   | 1.2.0 |
+| **`type`** | <code>'absolute' \| 'resource' \| 'asset' \| 'base64'</code> | The type of the attachment. See the docs for explained informations.                                   | 1.2.0 |
+| **`name`** | <code>string</code>                                          | The name of the attachment. See the docs for explained informations. Required for base64 attachements. | 1.2.0 |
 
 </docgen-api>
 
