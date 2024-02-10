@@ -1,8 +1,8 @@
 module.exports = {
   branches: [
     {
-      name: 'master'
-    }
+      name: 'master',
+    },
   ],
   tagFormat: 'V${version}',
   plugins: [
@@ -12,9 +12,9 @@ module.exports = {
         preset: 'conventionalcommits',
         releaseRules: [
           { type: 'refactor', release: 'patch' },
-          { scope: 'no-release', release: false }
-        ]
-      }
+          { scope: 'no-release', release: false },
+        ],
+      },
     ],
     [
       '@semantic-release/release-notes-generator',
@@ -34,7 +34,7 @@ module.exports = {
               return aIndex - bIndex;
             }
           },
-          commitsSort: 'header'
+          commitsSort: 'header',
         },
         presetConfig: {
           types: [
@@ -49,47 +49,43 @@ module.exports = {
             { type: 'refactor', section: 'Code Refactoring' },
             { type: 'test', section: 'Tests', hidden: true },
             { type: 'build', section: 'Build System', hidden: true },
-            { type: 'ci', section: 'Continuous Integration', hidden: true }
-          ]
-        }
-      }
+            { type: 'ci', section: 'Continuous Integration', hidden: true },
+          ],
+        },
+      },
     ],
     ['@semantic-release/npm'],
-    ['@semantic-release/exec',
+    [
+      '@semantic-release/exec',
       {
-        prepareCmd: 'npm run build'
-      }
+        prepareCmd: 'npm run build',
+      },
     ],
     [
       '@semantic-release/changelog',
       {
-        changelogFile: 'CHANGELOG.md'
-      }
+        changelogFile: 'CHANGELOG.md',
+      },
     ],
     [
       '@semantic-release/git',
       {
         message: 'chore(release): ${nextRelease.version}',
-        assets: [
-          'package.json',
-          'package-lock.json',
-          'CHANGELOG.md',
-          'README.md'
-        ]
+        assets: ['package.json', 'package-lock.json', 'CHANGELOG.md', 'README.md'],
       },
     ],
     [
       '@semantic-release/github',
       {
-        successComment: false
-      }
+        successComment: false,
+      },
     ],
     [
       '@saithodev/semantic-release-backmerge',
       {
         backmergeBranches: ['dev'],
         clearWorkspace: true,
-      }
-    ]
-  ]
+      },
+    ],
+  ],
 };
