@@ -41,7 +41,7 @@
     "swiftlint": "node-swiftlint",
     "swiftlint:fix": "node-swiftlint --fix --format",
     "docgen": "docgen --api EmailComposerPlugin --output-readme README.md --output-json dist/docs.json && doctoc README.md --github --title '**Table of Content**' --maxlevel 3",
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "check:updates": "npm-check-updates"
@@ -71,7 +71,7 @@
     "prettier": "3.2.5",
     "prettier-plugin-java": "2.5.0",
     "rimraf": "5.0.5",
-    "rollup": "2.79.1",
+    "rollup": "4.10.0",
     "semantic-release": "21.0.2",
     "swiftlint": "1.0.2",
     "typescript": "5.3.3"
