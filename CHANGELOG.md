@@ -1,3 +1,29 @@
+## [5.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V4.0.0...V5.0.0) (2024-02-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* Match Capacitor version strategy
+
+### Features
+
+* Match Capacitor version strategy ([be6a348](https://github.com/EinfachHans/capacitor-email-composer/commit/be6a3486016a93b3835a78fcca7d08ac2011cbce))
+
+
+### Bug Fixes
+
+* **android:** replace `jcenter` with `mavenCentral` ([3c37d74](https://github.com/EinfachHans/capacitor-email-composer/commit/3c37d740307c0abb9d6a069d55254e698c392ead)), closes [#28](https://github.com/EinfachHans/capacitor-email-composer/issues/28)
+
+
+### Documentation
+
+* add TransactionTooLargeException ([4781018](https://github.com/EinfachHans/capacitor-email-composer/commit/47810182b9c42b346a6c291ef26b56dce6a6f745)), closes [#19](https://github.com/EinfachHans/capacitor-email-composer/issues/19)
+
+
+### Code Refactoring
+
+* add `HasAccountResult` interface ([fbc014e](https://github.com/EinfachHans/capacitor-email-composer/commit/fbc014eaddd72eff0744f3eeb98a8830b2f1f05f))
+
 ## [2.0.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V2.0.0...V2.0.1) (2023-05-16)
 
 
