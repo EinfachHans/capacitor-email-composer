@@ -6,7 +6,7 @@ export interface EmailComposerPlugin {
    *
    * @since 1.0.0
    */
-  hasAccount(): Promise<{ hasAccount: boolean }>;
+  hasAccount(): Promise<HasAccountResult>;
 
   /**
    * Open the E-Mail Composer
@@ -15,6 +15,13 @@ export interface EmailComposerPlugin {
    * @since 1.0.0
    */
   open(options?: OpenOptions): Promise<void>;
+}
+
+export interface HasAccountResult {
+  /**
+   * @since 1.0.0
+   */
+  hasAccount: boolean;
 }
 
 export interface OpenOptions {

@@ -1,17 +1,9 @@
 # Capacitor E-Mail Composer
 
-![Maintenance](https://img.shields.io/maintenance/yes/2023)
+![Maintenance](https://img.shields.io/maintenance/yes/2024)
 [![npm](https://img.shields.io/npm/v/capacitor-email-composer)](https://www.npmjs.com/package/capacitor-email-composer)
 
 This Plugin is used to open a native E-Mail Composer within your Capacitor App.
-
-<!-- DONATE -->
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG_global.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LMX5TSQVMNMU6&source=url)
-
-This and other Open-Source Cordova/Capacitor Plugins are developed in my free time.
-To help ensure this plugin is kept updated, new features are added and bugfixes are implemented quickly, please donate a couple of dollars (or a little more if you can stretch) as this will help me to afford to dedicate time to its maintenance.
-Please consider donating if you're using this plugin in an app that makes you money, if you're being paid to make the app, if you're asking for new features or priority bug fixes.
-<!-- END DONATE -->
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -28,6 +20,8 @@ Please consider donating if you're using this plugin in an app that makes you mo
   - [open(...)](#open)
   - [Interfaces](#interfaces)
 - [Changelog](#changelog)
+- [Troubleshooting](#troubleshooting)
+  - [TransactionTooLargeException](#transactiontoolargeexception)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -48,7 +42,9 @@ Every attachment needs a `type` and a `path`. If you are adding a `base64` type 
 The path to the files must be defined absolute from the root of the file system. On Android the user has to allow the app first to read from external storage!
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'absolute',
     path: 'storage/sdcard/icon.png' // Android
@@ -61,7 +57,9 @@ EmailComposerPlugin.open({
 Each app has a resource folder, e.g. the res folder for Android apps or the Resource folder for iOS apps. The following example shows how to attach the app icon from within the app's resource folder.
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'resource',
     path: 'icon.png'
@@ -74,7 +72,9 @@ EmailComposerPlugin.open({
 The path to the files must be defined relative from the root of the mobile web app assets folder, which is located under the build folder.
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'asset',
     path: '/icon/favicon.png' // starting slash is important
@@ -87,7 +87,9 @@ EmailComposerPlugin.open({
 The code below shows how to attach a base64 encoded image which will be added as an image. **You must set a name**.
 
 ```ts
-EmailComposerPlugin.open({
+import { EmailComposer } from 'capacitor-email-composer'
+
+EmailComposer.open({
   attachments: [{
     type: 'base64',
     path: 'iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6...',
@@ -112,14 +114,16 @@ EmailComposerPlugin.open({
 ### hasAccount()
 
 ```typescript
-hasAccount() => Promise<{ hasAccount: boolean; }>
+hasAccount() => Promise<HasAccountResult>
 ```
 
 Checks if the User can send a Mail
 iOS: Check if the current Device is configured to send mail
 Android: Currently does nothing
 
-**Returns:** <code>Promise&lt;{ hasAccount: boolean; }&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#hasaccountresult">HasAccountResult</a>&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
@@ -127,7 +131,7 @@ Android: Currently does nothing
 ### open(...)
 
 ```typescript
-open(options?: OpenOptions) => Promise<void>
+open(options?: OpenOptions | undefined) => Promise<void>
 ```
 
 Open the E-Mail Composer
@@ -136,35 +140,51 @@ Open the E-Mail Composer
 | ------------- | --------------------------------------------------- | -------------------------------------- |
 | **`options`** | <code><a href="#openoptions">OpenOptions</a></code> | optional Options to prefill the E-Mail |
 
+**Since:** 1.0.0
+
 --------------------
 
 
 ### Interfaces
 
 
+#### HasAccountResult
+
+| Prop             | Type                 | Since |
+| ---------------- | -------------------- | ----- |
+| **`hasAccount`** | <code>boolean</code> | 1.0.0 |
+
+
 #### OpenOptions
 
-| Prop              | Type                      | Description                                                              |
-| ----------------- | ------------------------- | ------------------------------------------------------------------------ |
-| **`to`**          | <code>string[]</code>     | email addresses for TO field                                             |
-| **`cc`**          | <code>string[]</code>     | email addresses for CC field                                             |
-| **`bcc`**         | <code>string[]</code>     | email addresses for BCC field                                            |
-| **`subject`**     | <code>string</code>       | subject of the email                                                     |
-| **`body`**        | <code>string</code>       | email body                                                               |
-| **`isHtml`**      | <code>boolean</code>      | indicates if the body is HTML or plain text (primarily iOS)              |
-| **`attachments`** | <code>Attachment[]</code> | attachments that are added to the mail file paths or base64 data streams |
+| Prop              | Type                      | Description                                                              | Since |
+| ----------------- | ------------------------- | ------------------------------------------------------------------------ | ----- |
+| **`to`**          | <code>string[]</code>     | email addresses for TO field                                             | 1.0.0 |
+| **`cc`**          | <code>string[]</code>     | email addresses for CC field                                             | 1.0.0 |
+| **`bcc`**         | <code>string[]</code>     | email addresses for BCC field                                            | 1.0.0 |
+| **`subject`**     | <code>string</code>       | subject of the email                                                     | 1.0.0 |
+| **`body`**        | <code>string</code>       | email body                                                               | 1.0.0 |
+| **`isHtml`**      | <code>boolean</code>      | indicates if the body is HTML or plain text (primarily iOS)              | 1.0.1 |
+| **`attachments`** | <code>Attachment[]</code> | attachments that are added to the mail file paths or base64 data streams | 1.2.0 |
 
 
 #### Attachment
 
-| Prop       | Type                                                         | Description                                                                                            |
-| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| **`path`** | <code>string</code>                                          | The path of the attachment. See the docs for explained informations.                                   |
-| **`type`** | <code>'absolute' \| 'resource' \| 'asset' \| 'base64'</code> | The type of the attachment. See the docs for explained informations.                                   |
-| **`name`** | <code>string</code>                                          | The name of the attachment. See the docs for explained informations. Required for base64 attachements. |
+| Prop       | Type                                                         | Description                                                                                            | Since |
+| ---------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ----- |
+| **`path`** | <code>string</code>                                          | The path of the attachment. See the docs for explained informations.                                   | 1.2.0 |
+| **`type`** | <code>'absolute' \| 'resource' \| 'asset' \| 'base64'</code> | The type of the attachment. See the docs for explained informations.                                   | 1.2.0 |
+| **`name`** | <code>string</code>                                          | The name of the attachment. See the docs for explained informations. Required for base64 attachements. | 1.2.0 |
 
 </docgen-api>
 
 ## Changelog
 
 The full Changelog is available [here](CHANGELOG.md)
+
+## Troubleshooting
+
+### TransactionTooLargeException
+
+When sharing data between two applications, the Android OS might throw this exception for several reasons, for example if the file is too large.
+Read more [here](https://github.com/EinfachHans/capacitor-email-composer/issues/19#issuecomment-1786087158) about how to work around this problem.
