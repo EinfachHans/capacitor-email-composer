@@ -1,3 +1,14 @@
+## [6.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V5.0.0...V6.0.0) (2024-04-18)
+
+
+### ⚠ BREAKING CHANGES
+
+* Starting with version 6.X, Capacitor 6 is required
+
+### Features
+
+* add capacitor 6 support ([#34](https://github.com/EinfachHans/capacitor-email-composer/issues/34)) ([42555b5](https://github.com/EinfachHans/capacitor-email-composer/commit/42555b586cf552e20b4ac6fc6efa515bbfbbb9ce))
+
 ## [5.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V4.0.0...V5.0.0) (2024-02-10)
 
 
