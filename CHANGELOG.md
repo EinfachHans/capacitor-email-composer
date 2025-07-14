@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V7.0.0...V7.0.1) (2025-07-14)
+
+
+### Bug Fixes
+
+* **android:** filter email clients ([#42](https://github.com/EinfachHans/capacitor-email-composer/issues/42)) ([5402bdc](https://github.com/EinfachHans/capacitor-email-composer/commit/5402bdc36ec216421624e1a198f188da831e8c78))
+
 ## [7.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V6.0.0...V7.0.0) (2025-01-29)
 
 
