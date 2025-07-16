@@ -128,6 +128,10 @@ public class EmailComposer {
       emailIntents.add(targetIntent);
     }
 
+    if (emailIntents.isEmpty()) {
+      return originalIntent;
+    }
+    
     // Create chooser with filtered email apps only
     Intent chooserIntent = Intent.createChooser(emailIntents.remove(0), "Send email...");
     if (!emailIntents.isEmpty()) {
