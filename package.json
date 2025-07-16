@@ -1,6 +1,6 @@
 {
   "name": "capacitor-email-composer",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "description": "E-Mail Composer Plugin for Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

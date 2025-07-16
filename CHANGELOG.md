@@ -1,3 +1,10 @@
+## [7.0.2](https://github.com/EinfachHans/capacitor-email-composer/compare/V7.0.1...V7.0.2) (2025-07-16)
+
+
+### Bug Fixes
+
+* **android:** correctly handle empty email clients list ([#46](https://github.com/EinfachHans/capacitor-email-composer/issues/46)) ([9c5d4c8](https://github.com/EinfachHans/capacitor-email-composer/commit/9c5d4c8163c45b7ea5530873371432c6047cc1a1))
+
 ## [7.0.1](https://github.com/EinfachHans/capacitor-email-composer/compare/V7.0.0...V7.0.1) (2025-07-14)
 
 
