@@ -86,6 +86,8 @@ EmailComposer.open({
 
 The code below shows how to attach a base64 encoded image which will be added as an image. **You must set a name**.
 
+⚠️ Note: large base64 content can crash the app, if you need to pass large files (>1000Kb) use a uri intead.
+
 ```ts
 import { EmailComposer } from 'capacitor-email-composer'
 
