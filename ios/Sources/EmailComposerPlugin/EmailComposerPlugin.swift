@@ -7,7 +7,13 @@ import MessageUI
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(EmailComposerPlugin)
-public class EmailComposerPlugin: CAPPlugin, MFMailComposeViewControllerDelegate {
+public class EmailComposerPlugin: CAPPlugin, MFMailComposeViewControllerDelegate, CAPBridgedPlugin {
+    public let identifier = "EmailComposerPlugin"
+    public let jsName = "EmailComposer"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "hasAccount", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "open", returnType: CAPPluginReturnPromise),
+    ]
     private let implementation = EmailComposer()
 
     private var savedOpenCall: CAPPluginCall?
