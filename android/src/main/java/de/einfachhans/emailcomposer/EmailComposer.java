@@ -10,7 +10,6 @@ import com.getcapacitor.JSArray;
 import com.getcapacitor.PluginCall;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -67,8 +66,7 @@ public class EmailComposer {
    * @throws JSONException in case of a json parsing error
    */
   private Intent getIntentAccordingToAttachments(JSArray attachments, Intent intent) throws JSONException {
-    if (attachments == null || attachments.length() == 0)
-    {
+    if (attachments == null || attachments.length() == 0) {
       return intent;
     }
     ArrayList<Uri> uris = new ArrayList<>();
@@ -131,7 +129,7 @@ public class EmailComposer {
     if (emailIntents.isEmpty()) {
       return originalIntent;
     }
-    
+
     // Create chooser with filtered email apps only
     Intent chooserIntent = Intent.createChooser(emailIntents.remove(0), "Send email...");
     if (!emailIntents.isEmpty()) {
