@@ -1,3 +1,20 @@
+## [8.0.0](https://github.com/EinfachHans/capacitor-email-composer/compare/V7.0.2...V8.0.0) (2026-01-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* Starting with version 8.X, Capacitor 8 is required
+
+### Features
+
+* add capacitor 8 support ([45b7b68](https://github.com/EinfachHans/capacitor-email-composer/commit/45b7b6879f95e49c288a107b8de1e28e905182b1))
+* add SPM support ([123737f](https://github.com/EinfachHans/capacitor-email-composer/commit/123737f5619e347070f1887234ec50de5ca44bc3))
+
+
+### Documentation
+
+* add base64 warning ([#48](https://github.com/EinfachHans/capacitor-email-composer/issues/48)) ([d41c6da](https://github.com/EinfachHans/capacitor-email-composer/commit/d41c6da082c8f7db70e02fcf4e6d73b46c0518e1))
+
 ## [7.0.2](https://github.com/EinfachHans/capacitor-email-composer/compare/V7.0.1...V7.0.2) (2025-07-16)
 
 
